@@ -1,0 +1,64 @@
+@font-face {
+  font-family: Roboto;
+  src: url(./font/Roboto-Black.ttf); }
+:root {
+  --white-color: #ffffff;
+  --hover-color: #00aeef; }
+
+body {
+  margin: 0; }
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto; }
+
+.container-fluid {
+  max-width: 100%; }
+
+a {
+  box-sizing: border-box;
+  text-decoration: none; }
+
+#main {
+  position: relative;
+  top: -106px; }
+
+.header {
+  display: flex;
+  justify-content: flex-start; }
+  .header__left a img {
+    display: block; }
+  .header__right {
+    margin-left: 5%;
+    background-color: aqua; }
+    .header__right .menu__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 0;
+      margin: 0;
+      list-style: none; }
+      .header__right .menu__list a {
+        font-family: Roboto;
+        font-size: 14px;
+        color: var(--white-color);
+        padding: 0 15px;
+        transition: all 0.4s;
+        line-height: 90px;
+        display: inline-block; }
+      .header__right .menu__list .item-child::after {
+        content: '\f0d7';
+        font-family: FontAwesome;
+        font-weight: 500;
+        right: 0;
+        margin: 0 0 0 10px; }
+      .header__right .menu__list a:hover {
+        color: var(--hover-color);
+        transition: all 0.4s; }
+      .header__right .menu__list-item .sub-menu {
+        display: none; }
+
+#banner {
+  height: 100vh; }
+
+/*# sourceMappingURL=style.css.map */
