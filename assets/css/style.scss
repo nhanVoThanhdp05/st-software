@@ -2,9 +2,18 @@
     font-family: Roboto;
     src: url(./font/Roboto-Black.ttf);
 }
+@font-face{
+    font-family: Roboto-Medium;
+    src: url(./font/Roboto-Medium.ttf);
+}
+@font-face{
+    font-family: Roboto-Light;
+    src: url(./font/Roboto-Light.ttf);
+}
 :root{
     --white-color: #ffffff;
     --hover-color: #00aeef;
+    --dark-color: #000000;
 }
 body{
     margin: 0;
@@ -20,9 +29,81 @@ a{
     box-sizing: border-box;
     text-decoration: none;
 }
+#header{
+    position: relative;
+    z-index: 2;
+}
 #main{
     position: relative;
     top: -106px;
+    z-index: 1;
+    .bx-wrapper{
+        border: 0px !important;
+        margin-bottom: 0px;
+        .bx-pager{
+            bottom: 20px;
+            .bx-pager-link{
+                width: 15px;
+                height: 15px;
+                border-radius: 15px;
+                background-color: transparent;
+                border: 2px solid var(--white-color);
+                transition: all 0.6s;
+                &:hover{
+                    transition: all 0.6s;
+                    background-color: var(--white-color);
+                }
+            }
+            .active{
+                background-color: var(--white-color);
+            }
+        }
+    }
+    .bx-viewport{
+        height: 100vh !important;
+    }
+    .bx-controls{
+        .bx-controls-direction{
+            a{
+                background: none;
+                text-indent: 0%;
+                &.bx-next{
+                    right: 30px;
+                    &:hover{
+                        i{
+                            background-color: rgba(1,1,1,1);
+                            transition: all 0.6s;
+                        }
+                    }
+                }
+                &.bx-prev{
+                    left: 20px;
+                    &:hover{
+                        i{
+                            background-color: rgba(1,1,1,1);
+                            transition: all 0.6s;
+                        }
+                    }
+                }
+                i{
+                    font-style: unset;
+                    color: var(--white-color);
+                    font-family: FontAwesome;
+                    font-weight: bold;
+                    font-size: 28px;
+                    background-color: rgba(1,1,1,0.6);
+                    border-radius: 50%;
+                    transition: all 0.6s;
+                    &.fa-chevron-left{    
+                        padding: 7.5px 12px 6px 8px;
+                    }
+                    &.fa-chevron-right{
+                        padding: 7.5px 9px 6px 12px;
+                    }
+                }
+            }
+        }
+    }
 }
 .header{
     display: flex;
@@ -36,7 +117,6 @@ a{
     }
     &__right{
         margin-left: 5%;
-        background-color: aqua;
         .menu{
             &__list{
                 display: flex;
@@ -74,6 +154,56 @@ a{
         }
     }
 }
-#banner{
-    height: 100vh;
+
+.slider{
+    &__item{
+        &-img{
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            background-position-y: center;
+            filter: brightness(0.6);
+        }
+        &-desc{
+            background-color: #f7941d;
+            text-align: center;
+            width: fit-content;
+            margin: 0 auto;
+            font-family: Roboto;
+            cursor: pointer;
+            color: var(--white-color);
+            font-weight: 700;
+            font-size: 3.4vh;
+            padding: 18px 20px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 65px;
+            transform: translate(-50%);
+            left: 50%;
+            letter-spacing: 2px;
+        }
+    }
+}
+.stories{
+    &__title{
+        padding-top: 55px;
+        margin: 0 0 10px 0;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+        font-family: Roboto-Medium;
+        color: var(--dark-color);
+    }
+    &__desc{
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+        margin: 0 0 20px 0;
+        text-align: center;
+        font-family: Roboto-Light;
+    }
+    &__content{
+        padding-top: 32px;
+    }
 }
