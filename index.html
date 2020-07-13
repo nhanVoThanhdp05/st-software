@@ -27,7 +27,7 @@
                 <nav class="header__right-menu menu">
                     <ul class="menu__list">
                         <li class="menu__list-item"><a href="https://stunited.vn/" aria-current="page">HOME</a></li>
-                        <li class="menu__list-item"><a class="item-child" href="https://stunited.vn/st-software/">WHAT
+                        <li class="menu__list-item item-child"><a class="item-child-after" href="https://stunited.vn/st-software/">WHAT
                                 WE DO</a>
                             <ul class="sub-menu">
                                 <li><a href="https://stunited.vn/st-software/">ST SOFTWARE</a></li>
@@ -41,32 +41,65 @@
                         </li>
                         <li class="menu__list-item"><a href="https://stunited.vn/" aria-current="page">JOIN US</a></li>
                         <li class="menu__list-item"><a href="https://stunited.vn/" aria-current="page">LET&#8217;S
-                                TALK</a></li>
-
+                                TALK</a>
+                        </li>
                     </ul>
                 </nav>
+            </div>
+        </section>
+        <section class="header__mobile header__menu">
+            <div class="header__menu-nav">
+                <span class="nav-trigger">
+                    <i class="fa fa-navicon"></i>
+                </span>
+                <div class="header__menu-dropdown">
+                    <ul id="main-nav">
+                        <li class="menu__list-item"><a href="https://stunited.vn/" aria-current="page">HOME</a></li>
+                        <li class="menu__list-item item-child"><a class="item-child-after" href="https://stunited.vn/st-software/">WHAT
+                                WE DO</a>
+                            <ul class="sub-menu">
+                                <li><a href="https://stunited.vn/st-software/">ST SOFTWARE</a></li>
+                                <li><a href="https://stunited.vn/st-software/">ST DIGITAL</a></li>
+                                <li><a href="https://stunited.vn/st-software/">ST INCUBATION</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__list-item"><a href="https://stunited.vn/" aria-current="page">WHO WE ARE</a>
+                        </li>
+                        <li class="menu__list-item"><a href="https://stunited.vn/" aria-current="page">PORTFOLIO</a>
+                        </li>
+                        <li class="menu__list-item"><a href="https://stunited.vn/" aria-current="page">JOIN US</a></li>
+                        <li class="menu__list-item"><a href="https://stunited.vn/" aria-current="page">LET&#8217;S
+                                TALK</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__menu-logo">
+                <a href="#">
+                    <img src="./assets/images/logo.png" alt="LOGO">
+                </a>
             </div>
         </section>
     </header>
     <main id="main">
         <section id="banner" class="slider">
             <div class="slider__item">
-                <div class="slider__item-img" style="background-image: url('./assets/images/bk-one.jpg');">
+                <div class="slider__item-img" data-id="0" style="background-image: url('./assets/images/bk-one.jpg');">
                 </div>
                 <div class="slider__item-desc">Collaborate to kick-start your software project</div>
             </div>
             <div class="slider__item">
-                <div class="slider__item-img" style="background-image: url('./assets/images/bk-two.png');">
+                <div class="slider__item-img" data-id="1" style="background-image: url('./assets/images/bk-two.png');">
                 </div>
                 <div class="slider__item-desc">We code, we care</div>
             </div>
             <div class="slider__item">
-                <div class="slider__item-img" style="background-image: url('./assets/images/bk-three.jpg');">
+                <div class="slider__item-img" data-id="2" style="background-image: url('./assets/images/bk-three.jpg');">
                 </div>
                 <div class="slider__item-desc">We also do digital marketing</div>
             </div>
             <div class="slider__item">
-                <div class="slider__item-img" style="background-image: url('./assets/images/bk-four.jpg');">
+                <div class="slider__item-img" data-id="3" style="background-image: url('./assets/images/bk-four.jpg');">
                 </div>
                 <div class="slider__item-desc">And we are incubating startup projects too... </div>
             </div>
@@ -410,6 +443,11 @@
                 </div>
             </div>
         </section>
+        <div id="scrolltop">
+            <button id="button-scrolltop">
+                <i class="fa fa-angle-up"></i>
+            </button>
+        </div>
     </main>
     <footer id="footer">
         <section class="footertop">
@@ -451,7 +489,7 @@
                         frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no"
                         allow="encrypted-media"
                         src="https://www.facebook.com/v2.5/plugins/page.php?adapt_container_width=true&amp;app_id=217780371604666&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2d0b55c151ee9%26domain%3Dstunited.vn%26origin%3Dhttps%253A%252F%252Fstunited.vn%252Ffc1830352943c8%26relation%3Dparent.parent&amp;container_width=370&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fstunited.vn&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=false"
-                        style="border: none; visibility: visible; width: 340px; height: 214px;" class=""></iframe>
+                        style="border: none; visibility: visible; width: 100%; height: 214px;" class=""></iframe>
                 </div>
             </div>
         </section>
