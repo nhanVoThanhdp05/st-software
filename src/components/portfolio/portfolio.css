@@ -1,0 +1,59 @@
+.img-cont{
+  position: relative;
+}
+
+.img-cont2:hover .overlay2{
+  width: 100%;
+  height: 100%;
+  left: 0;
+  opacity: 0.7;
+}
+
+.image-overlay {
+  display: block;
+  height: 98%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: linear-gradient(0deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.412), rgba(255, 255, 255, 0.095));
+  color: white;
+  opacity: 0.7;
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 220px;
+}
+
+.img-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.container__image{
+  max-width: 1000px ;
+  margin: auto;
+}
+
+.overlay2 {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: white;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
