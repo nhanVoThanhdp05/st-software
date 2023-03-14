@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevPlus</title>
+    <!-- Booststrap 4 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- LightSlider -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../../../assets/packages/lightslider-master/dist/css/lightslider.css"
+    />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../../../assets/packages/lightslider-master/dist/js/lightslider.js"></script>
+
+    <link rel="stylesheet" href="HomePageBody.css" />
+  </head>
+  <body>
+    <!-- First part -->
+    <div class="text-center" style="background-color: azure">
+      <div class="container">
+        <div class="section__title">
+          <h2>Typical successful stories</h2>
+          <h3 class="sub-heading">
+            From ideas turned into carefully crafted pixels and problems crafted
+            into solutions.
+          </h3>
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 custom-card">
+              <img
+                src="https://stunited.vn/wp-content/uploads/2019/09/Capture.png"
+                alt="eHealth"
+                class="custom-card__content"
+              />
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 custom-card">
+              <div class="custom-card__content">
+                <img
+                  src="https://stunited.vn/wp-content/uploads/2019/09/image-logo-1.png"
+                  alt="eHealth"
+                  class="custom-card__content"
+                />
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 custom-card">
+              <div class="custom-card__content">
+                <img
+                  src="https://stunited.vn/wp-content/uploads/2019/09/figure01.jpg"
+                  alt="eHealth"
+                  class="custom-card__content"
+                />
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 custom-card">
+              <div class="custom-card__content">
+                <img
+                  src="https://stunited.vn/wp-content/uploads/2019/09/2e-jycg6_400x400.jpg"
+                  alt="eHealth"
+                  class="custom-card__content"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Second part -->
+    <div class="image-section text-center">
+      <div class="section__title">
+        <h2>WE DEVELOP | WE SUPPORT | WE IMPROVE</h2>
+        <h3 class="sub-heading">
+          Launch your ideas. Execute your plans. Maximize project success.
+        </h3>
+      </div>
+      <div class="image-section__content">
+        <div class="container">
+          <div class="row" id="service-list"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Third part -->
+    <div class="container">
+      <div class="slider-heading">
+        <h2>Trusted by the Clients & Partners</h2>
+      </div>
+      <div class="slider-button-wraper">
+        <button class="slider-control__button" id="goToPrevSlide">Prev</button>
+        <button class="slider-control__button" id="goToNextSlide">Next</button>
+      </div>
+      <div class="slider-content-wraper">
+          <ul id="content-slider" class="content-slider">
+            
+          </ul>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    // the json data
+    const services = [
+      {
+        icon: "https://stunited.vn/wp-content/uploads/2019/09/web-1-e1567826594877-150x150.png",
+        name: "Web App Development",
+        description:
+          "We create beautifully designed web apps precisely tailored to your situation. We deliver web systems of any size and complexity — from budding startup products to hi-end enterprise solutions.",
+      },
+      {
+        icon: "https://stunited.vn/wp-content/uploads/2019/09/mobile-phone-blue-round-2-512-150x150.png",
+        name: "Mobile App Development",
+        description:
+          "ST provides custom mobile application development across different platforms such as iOS and Android for consumer-facing and enterprise environment.",
+      },
+      {
+        icon: "https://stunited.vn/wp-content/uploads/2019/09/custome-150x150.png",
+        name: "Custom Software Development",
+        description:
+          "ST provides high quality, cost-effective and reliable software development services match your specific needs, budget and timeframe. We love to competes with other firms on the grounds of quality, creativity, n' dedication.",
+      },
+      {
+        icon: "https://stunited.vn/wp-content/uploads/2019/09/team-icon-23-e1567826832234-150x150.png",
+        name: "Dedicated Team",
+        description:
+          "Looking for the best resources to compliment your existing team? Our talented developers are available to augment your team on a short or long term basis.",
+      },
+      {
+        icon: "https://stunited.vn/wp-content/uploads/2019/09/marketing-150x150.png",
+        name: "Digital Marketing",
+        description:
+          "From establishing your online presence to increasing your influence on social, we use smart analytics to help you grow your business.",
+      },
+      {
+        icon: "https://stunited.vn/wp-content/uploads/2019/09/startup--150x150.png",
+        name: "Startup Incubation",
+        description:
+          "Our program provides a vast resources for entrepreneurs in Vietnam, focusing on ecosystem building, co-working spaces and incubation programs",
+      },
+    ];
+
+    const clients_partners = [
+      {
+        name: "vsec",
+        url: "https://vsec.com.vn",
+        image:
+          "https://stunited.vn/wp-content/uploads/2016/03/vsec_logo1-1.png",
+      },
+      {
+        name: "mti",
+        url: "https://mti-vietnam.vn",
+        image:
+          "https://stunited.vn/wp-content/uploads/2016/03/1544156780812-72-2-300x300.png",
+      },
+      {
+        name: "tms group",
+        url: "https://tmsgroup.vn",
+        image:
+          "https://stunited.vn/wp-content/uploads/2016/03/af90ab46-05fd-11e7-9e7d-cac091044fd5-2.jpg",
+      },
+      {
+        name: "mobifone",
+        url: "https://mobifone.vn/",
+        image:
+          "https://stunited.vn/wp-content/uploads/2019/08/logo-1-150x150.png",
+      },
+      {
+        name: "gitstart",
+        url: "https://www.gitstart.com/",
+        image:
+          "https://stunited.vn/wp-content/uploads/2016/03/68730533_678381192676224_5237130520554373120_n.png",
+      },
+      {
+        name: "flexidata",
+        url: "https://www.flexidata.vn/",
+        image:
+          "https://stunited.vn/wp-content/uploads/2016/03/logo700px-duongban-01-1-300x300.png",
+      },
+      {
+        name: "codecomplete",
+        url: "https://www.facebook.com/codecompletevietnam/",
+        image:
+          "https://stunited.vn/wp-content/uploads/2019/08/codecomplete-logo.png",
+      },
+      {
+        name: "synova",
+        url: "https://synova-solutions.com/",
+        image:
+          "https://stunited.vn/wp-content/uploads/2019/08/Synova-Logo-WebRetina-w-018-1.png",
+      },
+      {
+        name: "hollows",
+        url: "https://www.hollows.org/",
+        image:
+          "https://stunited.vn/wp-content/uploads/2016/03/b4cbe5b535d3de27d3835854cb64b56d-1165x550-c-center-1-300x300.jpg",
+      },
+      {
+        name: "alacarte",
+        url: "http://www.alacartedanangbeach.com/",
+        image:
+          "https://stunited.vn/wp-content/uploads/2019/08/26170224_2060251644219912_7814952797271844429_o-300x300.jpg",
+      },
+      {
+        name: "zendiamondsuites",
+        url: "https://zendiamondsuites.com/",
+        image:
+          "https://stunited.vn/wp-content/uploads/2019/08/Logo.ZenDiamondSuites12-300x300.jpg",
+      },
+    ];
+
+    $(document).ready(function () {
+      var slider = $("#content-slider").lightSlider({
+        slideMargin: 1,
+        auto: true,
+        keyPress: true,
+        thumbItem: 3,
+        item: 4,
+        vThumbWidth:50,
+        speed: 600
+      });
+      $("#goToPrevSlide").click(function () {
+        slider.goToPrevSlide();
+      });
+      $("#goToNextSlide").click(function () {
+        slider.goToNextSlide();
+      });
+    });
+
+    renderServicesList(services);
+
+    renderPartnersList(clients_partners);
+
+    function renderServicesList(services) {
+      let service_list = "";
+      $.each(services, function (index) {
+        service_list +=
+          '<div class="col-lg-4 col-md-4 col-sm-12 service-block">';
+        service_list += '<div class="service-block__content">';
+        service_list += '<div class="block__icon">';
+        service_list += '<img src="' + services[index].icon + '" alt="icon" />';
+        service_list += "</div>";
+        service_list += '<div class="block-content">';
+        service_list += "<h3>" + services[index].name + "</h3>";
+        service_list += "<p>" + services[index].description + "</p>";
+        service_list += '<a href="#"> See more </a>';
+        service_list += "</div>";
+        service_list += "</div>";
+        service_list += "</div>";
+      });
+      $("#service-list").append(service_list);
+    };
+
+    function renderPartnersList(clients_partners) {
+      let partners_list = "";
+      $.each(clients_partners, function (index) {
+        partners_list += '<li>';
+        partners_list += '<a href="' + clients_partners[index].url + '">';
+        partners_list += '<img src="' + clients_partners[index].image + '" alt="logo_partner" class="partner-logo" />';
+        partners_list += "</a>";
+        partners_list += "</li>";
+      });
+      $(".content-slider").append(partners_list);
+    };
+  </script>
+</html>
