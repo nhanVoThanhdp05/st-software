@@ -76,6 +76,14 @@
   font-weight: 700;
 }
 
+.btn{
+  color: white;
+}
+
+.butt-cont{
+  text-align: right;
+}
+
 /* Small device */
 @media (min-width: 544px) {
   h6 {
