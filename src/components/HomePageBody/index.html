@@ -24,11 +24,15 @@
     ></script>
 
     <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="../../../assets/packages/font-awesome-4.7.0/css/font-awesome.min.css"
     />
 
     <!-- LightSlider -->
@@ -44,58 +48,22 @@
   </head>
   <body>
     <!-- First part -->
-    <div class="text-center" style="background-color: azure">
-      <div class="container">
-        <div class="section__title">
-          <h2>Typical successful stories</h2>
-          <h3 class="sub-heading">
-            From ideas turned into carefully crafted pixels and problems crafted
-            into solutions.
-          </h3>
-          <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-12 custom-card">
-              <img
-                src="https://stunited.vn/wp-content/uploads/2019/09/Capture.png"
-                alt="eHealth"
-                class="custom-card__content"
-              />
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12 custom-card">
-              <div class="custom-card__content">
-                <img
-                  src="https://stunited.vn/wp-content/uploads/2019/09/image-logo-1.png"
-                  alt="eHealth"
-                  class="custom-card__content"
-                />
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12 custom-card">
-              <div class="custom-card__content">
-                <img
-                  src="https://stunited.vn/wp-content/uploads/2019/09/figure01.jpg"
-                  alt="eHealth"
-                  class="custom-card__content"
-                />
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12 custom-card">
-              <div class="custom-card__content">
-                <img
-                  src="https://stunited.vn/wp-content/uploads/2019/09/2e-jycg6_400x400.jpg"
-                  alt="eHealth"
-                  class="custom-card__content"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="container text-center">
+      <div class="section-title-wrapper">
+        <h2 class="heading">Typical successful stories</h2>
+        <h3 class="sub-heading">
+          From ideas turned into carefully crafted pixels and problems crafted
+          into solutions.
+        </h3>
+      </div>
+      <div class="row" id="stories-list">
       </div>
     </div>
     <!-- Second part -->
     <div class="image-section text-center">
-      <div class="section__title">
-        <h2>WE DEVELOP | WE SUPPORT | WE IMPROVE</h2>
-        <h3 class="sub-heading">
+      <div class="section-title-wrapper" style="color: #fff; font-weight: 500">
+        <h2 class="heading">WE DEVELOP | WE SUPPORT | WE IMPROVE</h2>
+        <h3 class="sub-heading" style="color: #fff">
           Launch your ideas. Execute your plans. Maximize project success.
         </h3>
       </div>
@@ -106,24 +74,57 @@
       </div>
     </div>
     <!-- Third part -->
-    <div class="container">
-      <div class="slider-heading">
-        <h2>Trusted by the Clients & Partners</h2>
-      </div>
-      <div class="slider-button-wraper">
-        <button class="slider-control__button" id="goToPrevSlide">Prev</button>
-        <button class="slider-control__button" id="goToNextSlide">Next</button>
-      </div>
-      <div class="slider-content-wraper">
-          <ul id="content-slider" class="content-slider">
-            
-          </ul>
+    <div style="background-color: #f5f5f5; padding-bottom: 55px">
+      <div class="container">
+        <div style="padding-bottom: 55px"></div>
+        <div class="section-title-wrapper" style="margin-bottom: 0">
+          <h2 class="heading">Trusted by the Clients & Partners</h2>
+        </div>
+        <div class="slider-button-wrapper row">
+          <button class="slider-control__button" id="goToPrevSlide">
+            Prev
+          </button>
+          <button class="slider-control__button" id="goToNextSlide">
+            Next
+          </button>
+        </div>
+        <div class="row">
+          <ul id="slider-content" class="slider-content"></ul>
+        </div>
       </div>
     </div>
   </body>
 
   <script>
     // the json data
+    
+    const stories = [
+      {
+        name: "eHealth",
+        image: "https://stunited.vn/wp-content/uploads/2019/09/Capture.png",
+        hashtag: "#ASP.NET #Android #iOS",
+        description: "A health data management application for the personal healthcare in coordination with employers, pharmacies and medical examination providers."
+      },
+      {
+        name: "Havuta",
+        image: "https://stunited.vn/wp-content/uploads/2019/09/image-logo-1.png",
+        hashtag: "#Blockchain #NodeJS #ReactJS #React Native",
+        description: "Havuta brings smartphone and blockchain-based solutions to the data collection challenges facing the development sector. Creating a blockchain-based feedback loop benefiting NGOs, engaging their beneficiaries, and promoting transparency."
+      },
+      {
+        name: "E-ASPRO",
+        image: "https://stunited.vn/wp-content/uploads/2019/09/figure01.jpg",
+        hashtag: "#Javascript #HTML #CSS",
+        description: "E-ASPRO is a cloudtype fulfillment mail order solution that enables you to efficiently manage mail order operations such as site management, orders, shipping, inventory, and shipping inquiries from one system."
+      },
+      {
+        name: "Vision Express",
+        image: "https://stunited.vn/wp-content/uploads/2019/09/2e-jycg6_400x400.jpg",
+        hashtag: "#Chatbot #Javascript #HTML #CSS",
+        description: "Chatbot to communicate with users, reply questions automatically."
+      }
+    ]
+
     const services = [
       {
         icon: "https://stunited.vn/wp-content/uploads/2019/09/web-1-e1567826594877-150x150.png",
@@ -233,26 +234,59 @@
     ];
 
     $(document).ready(function () {
-      var slider = $("#content-slider").lightSlider({
+      var slider = $("#slider-content").lightSlider({
         slideMargin: 1,
         auto: true,
         keyPress: true,
-        thumbItem: 3,
         item: 4,
-        vThumbWidth:50,
-        speed: 600
+        speed: 600,
+        controls: false,
+        thumbItem: 6,
+        thumbMargin: 2,
       });
       $("#goToPrevSlide").click(function () {
+        slider.goToPrevSlide();
         slider.goToPrevSlide();
       });
       $("#goToNextSlide").click(function () {
         slider.goToNextSlide();
+        slider.goToNextSlide();
       });
     });
 
+    renderStoriesList(stories);
     renderServicesList(services);
-
     renderPartnersList(clients_partners);
+
+    function renderStoriesList(stories) {
+      let stories_list = "";
+      $.each(stories, function (index) {
+        stories_list += '';
+        stories_list += '<div class="col-lg-3 col-md-3 col-sm-12">';
+        stories_list += '<div class="story-block">';
+        stories_list += '<img src="' + stories[index].image + '"alt="story_image" class="story-card__image" />';
+        stories_list += '<div class="story-block story-overlay-before">';
+        stories_list += '<div class="story-description-block">';
+        stories_list += '<div class="story-description-wrapper">';
+        stories_list += '<div class="social-icon-wrapper">';
+        stories_list += '<a href="https://www.facebook.com/stunited.vn/"><i class="fa fa-facebook-square social-icon"></i></a>';
+        stories_list += '<a href="#" class="btn-linkedin"><i class="fa fa-linkedin-square social-icon"></i></a>';
+        stories_list += '</div>';
+        stories_list += '<p class="story-hashtag">' + stories[index].hashtag + '</p>';
+        stories_list += '<h4 class="story-name">' + stories[index].name + '</h4>';
+        stories_list += '</div></div></div>';
+        stories_list += '<div class="story-overlay-after">';
+        stories_list += '<div class="story-center-content">';
+        stories_list += '<h4 class="story-name">' + stories[index].name + '</h4>';
+        stories_list += '<p><a href="#" class="story-hashtag">' + stories[index].hashtag + '</a></p>';
+        stories_list += '<p class="story-description">' + stories[index].description + '</p>';
+        stories_list += '<div class="social-icon-wrapper">';
+        stories_list += '<a class="facebook-icon" href="https://www.facebook.com/stunited.vn/"><i class="fa fa-facebook-square social-icon" aria-hidden="true"></i></a>';
+        stories_list += '<a class="linkedin-icon" href="#"><i class="fa fa-linkedin-square social-icon"></i></a>';
+        stories_list += ' </div></div></div></div></div>';
+      });
+      $("#stories-list").append(stories_list);
+    }
 
     function renderServicesList(services) {
       let service_list = "";
@@ -264,26 +298,33 @@
         service_list += '<img src="' + services[index].icon + '" alt="icon" />';
         service_list += "</div>";
         service_list += '<div class="block-content">';
-        service_list += "<h3>" + services[index].name + "</h3>";
-        service_list += "<p>" + services[index].description + "</p>";
-        service_list += '<a href="#"> See more </a>';
+        service_list +=
+          '<h3 class="service-name">' + services[index].name + "</h3>";
+        service_list +=
+          '<p class="service-description">' +
+          services[index].description +
+          "</p>";
+        service_list += '<a href="#" class="service-view-more"> See more </a>';
         service_list += "</div>";
         service_list += "</div>";
         service_list += "</div>";
       });
       $("#service-list").append(service_list);
-    };
+    }
 
     function renderPartnersList(clients_partners) {
       let partners_list = "";
       $.each(clients_partners, function (index) {
-        partners_list += '<li>';
+        partners_list += '<li class="col-md-3 partner-item">';
         partners_list += '<a href="' + clients_partners[index].url + '">';
-        partners_list += '<img src="' + clients_partners[index].image + '" alt="logo_partner" class="partner-logo" />';
+        partners_list +=
+          '<img src="' +
+          clients_partners[index].image +
+          '" alt="logo_partner" class="partner-logo" />';
         partners_list += "</a>";
         partners_list += "</li>";
       });
-      $(".content-slider").append(partners_list);
-    };
+      $(".slider-content").append(partners_list);
+    }
   </script>
 </html>
