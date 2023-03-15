@@ -1,3 +1,57 @@
-.banner-image{
-        height: 400px;
+.banner ::after{
+        content:"";
+        display: block;
+        width:100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        color: aliceblue;
+      }
+  .banner{
+        position: relative;
+      }
+      
+  .banner > * {
+        z-index: 10;
+        position: relative;
+      }
+  .banner{
+        background-image: url(https://stunited.vn/wp-content/uploads/2019/08/1566375726229.jpeg);
+        background-size: cover;
+        text-align: center;
+        padding: 30vh 0;
+        color: aliceblue;
+      }
+
+.content{
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 15px;
+        line-height: 1.42857;
+        color: #333;
+        margin-top: 50px;
+        margin-right: 30%;
+        margin-left: 150px;
+        padding-left: 50px;
+}
+
+.title-conclu{
+ margin-top: 50px;
+ text-align: center;
+}
+
+.title-main{
+  display: flex;
+  margin-top: 50px;
+  margin-left: 200px;
+  margin-right: 340px;
+  gap: 100px;
+}
+.title-main title-child-1{
+  width: 150px;
+  padding-right: 100px;
+  padding-left: 100px; 
+}
+.title-main title-child-2{
+  padding-right: 100px;
 }
