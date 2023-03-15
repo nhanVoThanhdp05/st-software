@@ -143,3 +143,18 @@
     font-size: 16px;
   }
 }
+
+/* second overlay text */
+.text2 {
+  color: black;
+  position: relative;
+  font-size: 18px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  top: 50%;
+}
+
+.h6 {
+  font-weight: bold;
+}
