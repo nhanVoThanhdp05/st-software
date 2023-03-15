@@ -37,8 +37,8 @@
   top: 0;
 }
 .footer__text--color,
-.contact_text,
-li {
+.contact_text
+{
   color: #fff;
   text-decoration: none !important;
   font-size: 14px;

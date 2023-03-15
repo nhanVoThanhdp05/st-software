@@ -5,7 +5,14 @@
   box-sizing: border-box;
   font-family: Roboto;
 }
-.header {
+.carousel-indicators li {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  opacity: 1;
+  border: 2px solid rgb(255, 255, 255);
+}
+.header { 
   max-height: 100px;
 }
 .overlay {
