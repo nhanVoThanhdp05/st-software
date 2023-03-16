@@ -1,0 +1,137 @@
+.img-cont {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-cont .text {
+  position: absolute;
+}
+
+.img-cont2:hover .overlay2 {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  opacity: 0.9;
+}
+
+.img-cont2:hover .image-overlay {
+  transform: translateX(-100%);
+  transition: .4s;
+}
+
+/* first overlay */
+.image-overlay {
+  transition: .4s;
+  display: block;
+  height: 98%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: linear-gradient(0deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.412), rgba(255, 255, 255, 0.095));
+  color: white;
+  opacity: 0.7;
+}
+
+/* overlay2 */
+.overlay2 {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 100%;
+  background-color: white;
+  width: 100%;
+  height: 98%;
+  transition: .4s ease;
+  display: block;
+}
+
+.img-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+/* first overlay text */
+.text {
+  color: white;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  bottom: 0;
+}
+
+/* second overlay text */
+.text2 {
+  color: black;
+  position: relative;
+  font-size: 18px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  top: 50%;
+}
+
+.h6 {
+  font-weight: 700;
+}
+
+/* Small device */
+@media (min-width: 544px) {
+  h6 {
+    font-size: 12px;
+  }
+}
+
+/* Medium Device */
+@media (min-width: 768px) {
+  h6 {
+    font-size: 20px;
+  }
+
+  p .change {
+    font-size: 12px;
+  }
+}
+
+/* Large Device */
+@media (min-width: 992px) {
+  h6 {
+    font-size: 12px;
+  }
+
+  p .change {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  h6 {
+    font-size: 9px;
+  }
+
+  p .change {
+    font-size: 12px;
+  }
+}
+
+/* Extra device */
+@media (min-width: 1200px) {
+  h6 {
+    font-size: 15px;
+  }
+
+  p .change {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1212px) {
+  h6 {
+    font-size: 17px;
+  }
+
+  p .change {
+    font-size: 16px;
+  }
+}
