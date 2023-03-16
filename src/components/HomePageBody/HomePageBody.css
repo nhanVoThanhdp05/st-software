@@ -68,10 +68,10 @@
 .story-overlay-after .story-description-wrapper {
   padding: 15px 20px;
 }
-.story-overlay-after a {
+.story-overlay-after a, .story-overlay-after h4 {
   color: #000;
 }
-.story-overlay-after a:hover {
+.story-overlay-after a:hover, .story-overlay-after h4:hover {
   text-decoration: none;
   color: #00AEEF;
 }
@@ -201,12 +201,14 @@
   width: 292.5px;
 }
 
-.partner-logo {
-  height: 150px;
-  width: 150px;
-}
 .partner-item {
-  text-align: center;
   background-color: #fff;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  list-style-type: none;
+}
+.partner-item-content {
+  width: 293px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }/*# sourceMappingURL=HomePageBody.css.map */

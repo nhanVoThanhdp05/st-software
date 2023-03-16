@@ -99,7 +99,7 @@
                 
             }
 
-            & a {
+            & a, h4 {
                 color: #000;
 
                 &:hover {
@@ -285,16 +285,17 @@
 }
 
 .partner {
-    &-logo {
-        height: 150px;
-        width: 150px;
-    }
-
     &-item {
-        text-align: center;
-        
         background-color: #fff;
         box-shadow: 0 0 3px rgba(0,0,0,.15);
+        list-style-type: none;
+
+        &-content {
+            width: 293px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
     }
 }
    
