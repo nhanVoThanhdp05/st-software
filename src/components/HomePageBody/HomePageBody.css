@@ -1,0 +1,212 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.section-title-wrapper {
+  padding: 55px 0 0 0;
+  margin: 0 0 52px 0;
+}
+.section-title-wrapper .heading {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+}
+.section-title-wrapper .sub-heading {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.story-card__image {
+  width: 100%;
+  height: 100%;
+}
+.story-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.story-block {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+}
+.story-block:hover .story-overlay-before {
+  transform: translateX(-100%);
+}
+.story-block:hover .story-overlay-after {
+  width: 100%;
+  left: 0;
+}
+.story-overlay-before {
+  transition: 0.5s;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.2) 55%, rgba(0, 0, 0, 0.8) 100%);
+}
+.story-overlay-before h4 {
+  color: #fff;
+}
+.story-overlay-before i {
+  color: #fff;
+}
+.story-overlay-after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: 100%;
+  transition: 0.4s ease;
+  overflow: hidden;
+  z-index: 4;
+}
+.story-overlay-after .story-description-wrapper {
+  padding: 15px 20px;
+}
+.story-overlay-after a {
+  color: #000;
+}
+.story-overlay-after a:hover {
+  text-decoration: none;
+  color: #00AEEF;
+}
+.story-overlay-after .facebook-icon {
+  color: #7f7f7f;
+}
+.story-overlay-after .facebook-icon:hover {
+  color: #506dab;
+}
+.story-overlay-after .linkedin-icon {
+  color: #7f7f7f;
+}
+.story-overlay-after .linkedin-icon:hover {
+  color: #007bb6;
+}
+.story-hashtag {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 0 12px;
+  color: #fff;
+  text-transform: none;
+}
+.story-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 15px 0 20px;
+}
+.story-description-block {
+  width: 100%;
+  height: 100%;
+  padding: 15px 20px;
+}
+.story-description-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.story-center-content {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  height: 100%;
+  padding: 15px 25px;
+}
+
+.social-icon {
+  padding: 0 2px 0 2px;
+}
+.social-icon-wrapper {
+  display: flex;
+  align-self: center;
+}
+.social-icon-wrapper a {
+  text-transform: none;
+}
+
+.image-section {
+  background-image: url("https://stunited.vn/wp-content/uploads/2016/02/houzez-header-4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image-section__content {
+  padding: 40px 0 55px;
+  cursor: pointer;
+}
+.image-section .service-block {
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+}
+.image-section .service-block__content {
+  margin-left: 30px;
+  padding-right: 30px;
+}
+.image-section .service-block__content .block__icon {
+  cursor: pointer;
+  font-size: 60px;
+  min-width: 80px;
+  padding: 80px 0 70px;
+}
+.image-section .service-block:hover {
+  box-shadow: 0 70px 70px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  transform: translateY(-10px);
+  transition: 0.2s;
+}
+.image-section .service-name {
+  font-weight: 500;
+  font-size: 20px;
+}
+.image-section .service-description {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #636363;
+}
+.image-section .service-view-more {
+  font-weight: 400;
+  font-size: 16px;
+  color: #00AEEF;
+  text-decoration: none;
+}
+
+.slider-button-wrapper {
+  float: right;
+}
+.slider-control__button {
+  color: #00AEEF;
+  background-color: transparent;
+  border: 1px solid #00AEEF;
+  border-radius: 3px;
+  font-size: 10px;
+  margin: 1px;
+}
+.slider-control__button:hover {
+  color: #fff;
+  background-color: #00AEEF;
+}
+.slider-content {
+  margin-top: 40px;
+}
+.slider-content__item {
+  width: 292.5px;
+}
+
+.partner-logo {
+  height: 150px;
+  width: 150px;
+}
+.partner-item {
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+}/*# sourceMappingURL=HomePageBody.css.map */
