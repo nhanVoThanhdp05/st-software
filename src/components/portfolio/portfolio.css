@@ -76,6 +76,14 @@
   font-weight: 700;
 }
 
+.btn{
+  color: white;
+}
+
+.butt-cont{
+  text-align: right;
+}
+
 /* Small device */
 @media (min-width: 544px) {
   h6 {
@@ -86,7 +94,7 @@
 /* Medium Device */
 @media (min-width: 768px) {
   h6 {
-    font-size: 20px;
+    font-size: 9px;
   }
 
   p .change {
@@ -98,16 +106,6 @@
 @media (min-width: 992px) {
   h6 {
     font-size: 12px;
-  }
-
-  p .change {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 768px) {
-  h6 {
-    font-size: 9px;
   }
 
   p .change {
@@ -134,4 +132,19 @@
   p .change {
     font-size: 16px;
   }
+}
+
+/* second overlay text */
+.text2 {
+  color: black;
+  position: relative;
+  font-size: 18px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  top: 50%;
+}
+
+.h6 {
+  font-weight: bold;
 }
