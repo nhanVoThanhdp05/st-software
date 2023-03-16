@@ -35,14 +35,12 @@
       href="../../../assets/packages/font-awesome-4.7.0/css/font-awesome.min.css"
     />
 
-    <!-- LightSlider -->
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="../../../assets/packages/lightslider-master/dist/css/lightslider.css"
-    />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="../../../assets/packages/lightslider-master/dist/js/lightslider.js"></script>
+    <!-- OwlCarousel -->
+    <link rel="stylesheet" href="../../../assets/packages/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../assets/packages/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+
+    <script src="../../../assets/packages/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
+    <script src="../../../assets/packages/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 
     <link rel="stylesheet" href="HomePageBody.css" />
   </head>
@@ -88,13 +86,14 @@
             Next
           </button>
         </div>
-        <div class="row">
-          <ul id="slider-content" class="slider-content"></ul>
+        <div class="row" style="padding-top: 20px;">
+          <div class="owl-carousel owl-theme owl-loaded" id="slider-content"></div>
+          <div class="owl-dots" style="margin: 1px 0 1px 0;"></div>
+      </div>
         </div>
       </div>
     </div>
   </body>
-
   <script>
     // the json data
     
@@ -233,24 +232,30 @@
       },
     ];
 
-    $(document).ready(function () {
-      var slider = $("#slider-content").lightSlider({
-        slideMargin: 1,
-        auto: true,
-        keyPress: true,
-        item: 4,
-        speed: 600,
-        controls: false,
-        thumbItem: 6,
-        thumbMargin: 2,
+    $(document).ready(function(){
+      var owl = $(".owl-carousel");
+      owl.owlCarousel({
+        loop:true,
+        margin: 5,
+        dots: true,
+        dotsEach: 4,
+        responsive:{
+        400:{
+            items: 3,
+        },
+        768:{
+            items: 4,
+        }}
       });
+      //owl.trigger('play.owl.autoplay',[6000]);
+
       $("#goToPrevSlide").click(function () {
-        slider.goToPrevSlide();
-        slider.goToPrevSlide();
+        owl.trigger('prev.owl.carousel');
+        console.log('back');
       });
+
       $("#goToNextSlide").click(function () {
-        slider.goToNextSlide();
-        slider.goToNextSlide();
+        owl.trigger('next.owl.carousel');
       });
     });
 
@@ -315,16 +320,18 @@
     function renderPartnersList(clients_partners) {
       let partners_list = "";
       $.each(clients_partners, function (index) {
-        partners_list += '<li class="col-md-3 partner-item">';
+        partners_list += '<li class=" partner-item">';
+        partners_list += '<div class="partner-item-content ">'
         partners_list += '<a href="' + clients_partners[index].url + '">';
         partners_list +=
           '<img src="' +
           clients_partners[index].image +
-          '" alt="logo_partner" class="partner-logo" />';
+          '" alt="logo_partner" style="width: 150px; height: 150px;" />';
         partners_list += "</a>";
+        partners_list += "</div>";
         partners_list += "</li>";
       });
-      $(".slider-content").append(partners_list);
+      $("#slider-content").append(partners_list);
     }
   </script>
 </html>
