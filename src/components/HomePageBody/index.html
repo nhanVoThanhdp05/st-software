@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevPlus</title>
+
     <!-- Booststrap 4 -->
     <link
       rel="stylesheet"
@@ -42,32 +43,42 @@
     <script src="../../../assets/packages/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
     <script src="../../../assets/packages/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 
+    <!-- CSS -->    
     <link rel="stylesheet" href="HomePageBody.css" />
   </head>
   <body>
     <!-- First part -->
-    <div class="container text-center">
-      <div class="section-title-wrapper">
-        <h2 class="heading">Typical successful stories</h2>
-        <h3 class="sub-heading">
-          From ideas turned into carefully crafted pixels and problems crafted
-          into solutions.
-        </h3>
+    <div class="text-center" style="background-color: #F5F5F5;">
+      <div class="container custom-container">
+        <div class="main-content-wrapper">
+          <div class="title-wrapper">
+            <h2 class="heading">Typical successful stories</h2>
+            <h3 class="sub-heading">
+              From ideas turned into carefully crafted pixels and problems crafted
+              into solutions.
+            </h3>
+          </div>
+        </div>
+        <div class="row" id="stories-list"></div>
+          <!-- <div class="row container" id="stories-list"></div> -->
+          </div>
       </div>
-      <div class="row" id="stories-list">
-      </div>
-    </div>
     <!-- Second part -->
-    <div class="image-section text-center">
-      <div class="section-title-wrapper" style="color: #fff; font-weight: 500">
-        <h2 class="heading">WE DEVELOP | WE SUPPORT | WE IMPROVE</h2>
-        <h3 class="sub-heading" style="color: #fff">
-          Launch your ideas. Execute your plans. Maximize project success.
-        </h3>
-      </div>
-      <div class="image-section__content">
-        <div class="container">
-          <div class="row" id="service-list"></div>
+    <div class="image-section text-center" style="color: #fff; ">
+      <div class="image-section-inner">
+        <div class="title-wrapper" style="font-weight: 500;">
+          <h2 class="heading">WE DEVELOP | WE SUPPORT | WE IMPROVE</h2>
+          <h3 class="sub-heading">
+            Launch your ideas. Execute your plans. Maximize project success.
+          </h3>
+        </div>
+        <div class="image-section__content" data-bottom-top="top: -50%;" data-top-bottom="top: 0%;" style="height: 150%;">
+          <div class="container custom-container">
+            <div style="margin: 0 15px 0 15px;">
+              <div class="row" id="service-list"></div>
+            </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -75,7 +86,7 @@
     <div style="background-color: #f5f5f5; padding-bottom: 55px">
       <div class="container">
         <div style="padding-bottom: 55px"></div>
-        <div class="section-title-wrapper" style="margin-bottom: 0">
+        <div class="title-wrapper" style="margin-bottom: 0">
           <h2 class="heading">Trusted by the Clients & Partners</h2>
         </div>
         <div class="slider-button-wrapper row">
@@ -266,7 +277,6 @@
     function renderStoriesList(stories) {
       let stories_list = "";
       $.each(stories, function (index) {
-        stories_list += '';
         stories_list += '<div class="col-lg-3 col-md-3 col-sm-12">';
         stories_list += '<div class="story-block">';
         stories_list += '<img src="' + stories[index].image + '"alt="story_image" class="story-card__image" />';
@@ -282,7 +292,7 @@
         stories_list += '</div></div></div>';
         stories_list += '<div class="story-overlay-after">';
         stories_list += '<div class="story-center-content">';
-        stories_list += '<h4 class="story-name">' + stories[index].name + '</h4>';
+        stories_list += '<h4><a href="#" class="story-name">' + stories[index].name + '</a></h4>';
         stories_list += '<p><a href="#" class="story-hashtag">' + stories[index].hashtag + '</a></p>';
         stories_list += '<p class="story-description">' + stories[index].description + '</p>';
         stories_list += '<div class="social-icon-wrapper">';
