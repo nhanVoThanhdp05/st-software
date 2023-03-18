@@ -1,0 +1,75 @@
+* {
+  font-family: "Roboto";
+  font-weight: 300;
+  line-height: 24px;
+  text-transform: none;
+}
+
+.header-wrapper {
+  position: relative;
+}
+.header-content {
+  position: relative;
+}
+
+.banner-parallax {
+  height: 400px !important;
+  overflow: hidden;
+  position: relative;
+}
+.banner-wrapper {
+  z-index: 0;
+  visibility: inherit;
+  opacity: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.banner-background-image {
+  background-image: url("https://stunited.vn/wp-content/uploads/2019/09/sparkgrowth-124408265.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  visibility: inherit;
+}
+.banner-background-image::before {
+  background-color: #000000;
+  opacity: 0.4;
+  z-index: 3;
+  content: "";
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.banner-caption {
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+}
+@media only screen and (mix-width: 991px) {
+  .banner-caption {
+    top: 55%;
+  }
+}
+.banner-caption h1 {
+  color: #ffffff;
+  font-size: 43px;
+  line-height: 43px !important;
+  margin: 0 0 10px;
+}
+.banner-caption h2 {
+  color: #000000;
+  font-size: 20px;
+  margin: 0 0 20px;
+}/*# sourceMappingURL=STDigital.css.map */
