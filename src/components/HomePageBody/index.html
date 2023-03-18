@@ -37,46 +37,56 @@
     />
 
     <!-- OwlCarousel -->
-    <link rel="stylesheet" href="../../../assets/packages/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="../../../assets/packages/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link
+      rel="stylesheet"
+      href="../../../assets/packages/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../assets/packages/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
+    />
 
     <script src="../../../assets/packages/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
     <script src="../../../assets/packages/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 
-    <!-- CSS -->    
+    <!-- CSS -->
     <link rel="stylesheet" href="HomePageBody.css" />
   </head>
   <body>
     <!-- First part -->
-    <div class="text-center" style="background-color: #F5F5F5;">
-      <div class="container custom-container">
+    <div class="text-center" style="background-color: #f5f5f5">
+      <div class="container">
         <div class="main-content-wrapper">
           <div class="title-wrapper">
             <h2 class="heading">Typical successful stories</h2>
             <h3 class="sub-heading">
-              From ideas turned into carefully crafted pixels and problems crafted
-              into solutions.
+              From ideas turned into carefully crafted pixels and problems
+              crafted into solutions.
             </h3>
           </div>
         </div>
         <div class="row" id="stories-list"></div>
-          <!-- <div class="row container" id="stories-list"></div> -->
-          </div>
+        <!-- <div class="row container" id="stories-list"></div> -->
       </div>
+    </div>
     <!-- Second part -->
-    <div class="image-section text-center" style="color: #fff; ">
+    <div class="image-section text-center" style="color: #fff">
       <div class="image-section-inner">
-        <div class="title-wrapper" style="font-weight: 500;">
+        <div class="title-wrapper" style="font-weight: 500">
           <h2 class="heading">WE DEVELOP | WE SUPPORT | WE IMPROVE</h2>
           <h3 class="sub-heading">
             Launch your ideas. Execute your plans. Maximize project success.
           </h3>
         </div>
-        <div class="image-section__content" data-bottom-top="top: -50%;" data-top-bottom="top: 0%;" style="height: 150%;">
-          <div class="container custom-container">
-            <div style="margin: 0 15px 0 15px;">
+        <div
+          class="image-section__content"
+          data-bottom-top="top: -50%;"
+          data-top-bottom="top: 0%;"
+          style="height: 150%"
+        >
+          <div class="container">
+            <div style="margin: 0 15px 0 15px">
               <div class="row" id="service-list"></div>
-            </div>
             </div>
           </div>
         </div>
@@ -85,55 +95,79 @@
     <!-- Third part -->
     <div style="background-color: #f5f5f5; padding-bottom: 55px">
       <div class="container">
-        <div style="padding-bottom: 55px"></div>
-        <div class="title-wrapper" style="margin-bottom: 0">
-          <h2 class="heading">Trusted by the Clients & Partners</h2>
-        </div>
-        <div class="slider-button-wrapper row">
-          <button class="slider-control__button" id="goToPrevSlide">
-            Prev
-          </button>
-          <button class="slider-control__button" id="goToNextSlide">
-            Next
-          </button>
-        </div>
-        <div class="row" style="padding-top: 20px;">
-          <div class="owl-carousel owl-theme owl-loaded" id="slider-content"></div>
-          <div class="owl-dots" style="margin: 1px 0 1px 0;"></div>
-      </div>
+        <div style="padding-top: 35px">
+          <div class="title-wrapper" style="padding-bottom: 0">
+            <h2 class="heading" style="padding-bottom: 0px">
+              Trusted by the Clients & Partners
+            </h2>
+          </div>
+          <div class="slider-button-wrapper">
+              <button class="slider-control__button" id="goToPrevSlide">
+                Prev
+              </button>
+              <button class="slider-control__button" id="goToNextSlide">
+                Next
+              </button>
+          </div>
+          <div class="row" style="position: relative; padding-top: 30px">
+            <div
+              class="slide-animated owl-carousel owl-theme owl-loaded owl-drag"
+            >
+              <div class="owl-stage-outer">
+                <div class="owl-stage" id="slider-content"></div>
+              </div>
+
+              <div class="owl-dots">
+                <button class="owl-dot active" id="first-button">
+                  <span></span>
+                </button>
+                <button class="owl-dot active" id="second-button">
+                  <span></span>
+                </button>
+                <button class="owl-dot active" id="third-button">
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </body>
+
   <script>
-    // the json data
-    
     const stories = [
       {
         name: "eHealth",
         image: "https://stunited.vn/wp-content/uploads/2019/09/Capture.png",
         hashtag: "#ASP.NET #Android #iOS",
-        description: "A health data management application for the personal healthcare in coordination with employers, pharmacies and medical examination providers."
+        description:
+          "A health data management application for the personal healthcare in coordination with employers, pharmacies and medical examination providers.",
       },
       {
         name: "Havuta",
-        image: "https://stunited.vn/wp-content/uploads/2019/09/image-logo-1.png",
+        image:
+          "https://stunited.vn/wp-content/uploads/2019/09/image-logo-1.png",
         hashtag: "#Blockchain #NodeJS #ReactJS #React Native",
-        description: "Havuta brings smartphone and blockchain-based solutions to the data collection challenges facing the development sector. Creating a blockchain-based feedback loop benefiting NGOs, engaging their beneficiaries, and promoting transparency."
+        description:
+          "Havuta brings smartphone and blockchain-based solutions to the data collection challenges facing the development sector. Creating a blockchain-based feedback loop benefiting NGOs, engaging their beneficiaries, and promoting transparency.",
       },
       {
         name: "E-ASPRO",
         image: "https://stunited.vn/wp-content/uploads/2019/09/figure01.jpg",
         hashtag: "#Javascript #HTML #CSS",
-        description: "E-ASPRO is a cloudtype fulfillment mail order solution that enables you to efficiently manage mail order operations such as site management, orders, shipping, inventory, and shipping inquiries from one system."
+        description:
+          "E-ASPRO is a cloudtype fulfillment mail order solution that enables you to efficiently manage mail order operations such as site management, orders, shipping, inventory, and shipping inquiries from one system.",
       },
       {
         name: "Vision Express",
-        image: "https://stunited.vn/wp-content/uploads/2019/09/2e-jycg6_400x400.jpg",
+        image:
+          "https://stunited.vn/wp-content/uploads/2019/09/2e-jycg6_400x400.jpg",
         hashtag: "#Chatbot #Javascript #HTML #CSS",
-        description: "Chatbot to communicate with users, reply questions automatically."
-      }
-    ]
+        description:
+          "Chatbot to communicate with users, reply questions automatically.",
+      },
+    ];
 
     const services = [
       {
@@ -243,30 +277,42 @@
       },
     ];
 
-    $(document).ready(function(){
+    $(document).ready(function () {
       var owl = $(".owl-carousel");
       owl.owlCarousel({
-        loop:true,
-        margin: 5,
-        dots: true,
-        dotsEach: 4,
-        responsive:{
-        400:{
-            items: 3,
-        },
-        768:{
+        dots: false, //show dots navigation
+        responsive: {
+          0: {
+            items: 3, //the number of items on the screen
+          },
+          792: {
             items: 4,
-        }}
+          },
+        },
       });
-      //owl.trigger('play.owl.autoplay',[6000]);
+      owl.trigger("play.owl.autoplay", [6000]);
 
       $("#goToPrevSlide").click(function () {
-        owl.trigger('prev.owl.carousel');
-        console.log('back');
+        owl.trigger("prev.owl.carousel");
+        owl.trigger("prev.owl.carousel");
+        console.log("back");
       });
 
       $("#goToNextSlide").click(function () {
-        owl.trigger('next.owl.carousel');
+        owl.trigger("next.owl.carousel");
+        owl.trigger("next.owl.carousel");
+      });
+
+      $("#first-button").click(function () {
+        owl.trigger("to.owl.carousel", 0);
+      });
+
+      $("#second-button").click(function () {
+        owl.trigger("to.owl.carousel", 3);
+      });
+
+      $("#third-button").click(function () {
+        owl.trigger("to.owl.carousel", 7);
       });
     });
 
@@ -279,26 +325,42 @@
       $.each(stories, function (index) {
         stories_list += '<div class="col-lg-3 col-md-3 col-sm-12">';
         stories_list += '<div class="story-block">';
-        stories_list += '<img src="' + stories[index].image + '"alt="story_image" class="story-card__image" />';
+        stories_list +=
+          '<img src="' +
+          stories[index].image +
+          '"alt="story_image" class="story-card__image" />';
         stories_list += '<div class="story-block story-overlay-before">';
         stories_list += '<div class="story-description-block">';
         stories_list += '<div class="story-description-wrapper">';
         stories_list += '<div class="social-icon-wrapper">';
-        stories_list += '<a href="https://www.facebook.com/stunited.vn/"><i class="fa fa-facebook-square social-icon"></i></a>';
-        stories_list += '<a href="#" class="btn-linkedin"><i class="fa fa-linkedin-square social-icon"></i></a>';
-        stories_list += '</div>';
-        stories_list += '<p class="story-hashtag">' + stories[index].hashtag + '</p>';
-        stories_list += '<h4 class="story-name">' + stories[index].name + '</h4>';
-        stories_list += '</div></div></div>';
+        stories_list +=
+          '<a href="https://www.facebook.com/stunited.vn/"><i class="fa fa-facebook-square social-icon"></i></a>';
+        stories_list +=
+          '<a href="#" class="btn-linkedin"><i class="fa fa-linkedin-square social-icon"></i></a>';
+        stories_list += "</div>";
+        stories_list +=
+          '<p class="story-hashtag">' + stories[index].hashtag + "</p>";
+        stories_list +=
+          '<h4 class="story-name">' + stories[index].name + "</h4>";
+        stories_list += "</div></div></div>";
         stories_list += '<div class="story-overlay-after">';
         stories_list += '<div class="story-center-content">';
-        stories_list += '<h4><a href="#" class="story-name">' + stories[index].name + '</a></h4>';
-        stories_list += '<p><a href="#" class="story-hashtag">' + stories[index].hashtag + '</a></p>';
-        stories_list += '<p class="story-description">' + stories[index].description + '</p>';
+        stories_list +=
+          '<h4><a href="#" class="story-name">' +
+          stories[index].name +
+          "</a></h4>";
+        stories_list +=
+          '<p><a href="#" class="story-hashtag">' +
+          stories[index].hashtag +
+          "</a></p>";
+        stories_list +=
+          '<p class="story-description">' + stories[index].description + "</p>";
         stories_list += '<div class="social-icon-wrapper">';
-        stories_list += '<a class="facebook-icon" href="https://www.facebook.com/stunited.vn/"><i class="fa fa-facebook-square social-icon" aria-hidden="true"></i></a>';
-        stories_list += '<a class="linkedin-icon" href="#"><i class="fa fa-linkedin-square social-icon"></i></a>';
-        stories_list += ' </div></div></div></div></div>';
+        stories_list +=
+          '<a class="facebook-icon" href="https://www.facebook.com/stunited.vn/"><i class="fa fa-facebook-square social-icon" aria-hidden="true"></i></a>';
+        stories_list +=
+          '<a class="linkedin-icon" href="#"><i class="fa fa-linkedin-square social-icon"></i></a>';
+        stories_list += " </div></div></div></div></div>";
       });
       $("#stories-list").append(stories_list);
     }
@@ -330,16 +392,20 @@
     function renderPartnersList(clients_partners) {
       let partners_list = "";
       $.each(clients_partners, function (index) {
-        partners_list += '<li class=" partner-item">';
-        partners_list += '<div class="partner-item-content ">'
+        partners_list += '<div class="owl-item">';
+        partners_list += '<div class="item">';
+        partners_list += '<div class="owl-item-partner ">';
+        partners_list += '<div class="partner-logo">';
         partners_list += '<a href="' + clients_partners[index].url + '">';
         partners_list +=
           '<img src="' +
           clients_partners[index].image +
-          '" alt="logo_partner" style="width: 150px; height: 150px;" />';
+          '" alt="logo_partner" width="150px" height="150px"/>';
         partners_list += "</a>";
         partners_list += "</div>";
-        partners_list += "</li>";
+        partners_list += "</div>";
+        partners_list += "</div>";
+        partners_list += "</div>";
       });
       $("#slider-content").append(partners_list);
     }

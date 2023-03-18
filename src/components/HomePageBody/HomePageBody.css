@@ -2,29 +2,32 @@
   font-family: "Roboto";
 }
 
+@media screen and (max-width: 765px) {
+  .container {
+    width: 450px !important;
+    max-width: 470px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+}
 @media only screen and (min-width: 1250px) {
-  .custom-container {
-    max-width: 1220px !important;
+  .container {
     width: 1200px !important;
+    max-width: 1220px !important;
   }
 }
 @media only screen and (min-width: 1000px) and (max-width: 1220px) {
-  .custom-container {
-    max-width: 1100px !important;
+  .container {
     width: 1000px !important;
+    max-width: 1100px !important;
   }
 }
-@media only screen and (max-width: 992px) {
-  .custom-container {
-    max-width: 800px !important;
+@media only screen and (max-width: 992px) and (min-width: 766px) {
+  .container {
     width: 780px !important;
+    max-width: 800px !important;
   }
 }
-.main-content-wrapper {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 .title-wrapper {
   padding: 55px 0 43px 0;
 }
@@ -207,7 +210,8 @@
 }
 
 .slider-button-wrapper {
-  float: right;
+  display: flex;
+  justify-content: flex-end;
 }
 .slider-control__button {
   color: #00AEEF;
@@ -228,14 +232,37 @@
   width: 292.5px;
 }
 
-.partner-item {
-  background-color: #fff;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-  list-style-type: none;
+.partner-logo {
+  text-align: center;
 }
-.partner-item-content {
-  width: 293px;
-  display: flex;
-  justify-content: center;
+.partner-logo img {
+  width: auto !important;
+  display: inline-block !important;
+}
+
+@media only screen and (max-width: 792px) {
+  .partner-logo img {
+    width: 120px !important;
+    height: 120px !important;
+  }
+}
+.owl-stage {
+  transform: translate3d(-2047px, 0px, 0px);
+  transition: 1.4s;
+}
+.owl-dots {
+  margin-top: 10px;
+}
+.owl-dot {
+  display: inline;
+}
+.owl-dot span {
+  margin: 0px !important;
+}
+.owl-item-partner {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  list-style-type: none;
+  padding: 35px 15px;
   text-align: center;
 }/*# sourceMappingURL=HomePageBody.css.map */
