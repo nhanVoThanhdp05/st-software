@@ -1,21 +1,53 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
 }
 
-.section-title-wrapper {
-    padding: 55px 0 0 0;
-    margin: 0 0 52px 0;
+@media screen and (max-width: 765px) {
+    .container {
+        width: 450px !important;
+        max-width: 470px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    .container {
+        width: 1200px !important;
+        max-width: 1220px !important;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1220px) {
+    .container {
+        width: 1000px !important;
+        max-width: 1100px !important;
+    }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 766px) {
+    .container {
+        width: 780px !important;
+        max-width: 800px !important;
+    }
+}
+
+
+.title-wrapper {
+    padding: 55px 0 43px 0;
 
     .heading {
         font-size: 24px;
         font-weight: 500; 
+        line-height: 32px;
 
-        margin: 0 0 10px 0;
+        margin-bottom: 10px;
     }
     
     .sub-heading {
         font-size: 16px;
         font-weight: 300;
+        line-height: 24px;
     }
 }
 
@@ -23,7 +55,7 @@
     &-card {    
         &__image {
             width: 100%;
-            height: 100%;
+            vertical-align: middle;
         }
     }
 
@@ -94,12 +126,15 @@
 
             z-index: 4;
 
+            overflow: auto;
+
             & .story-description-wrapper {
                 padding: 15px 20px;
+                overflow: scroll;
                 
             }
 
-            & a, h4 {
+            & a {
                 color: #000;
 
                 &:hover {
@@ -110,6 +145,7 @@
 
             & .facebook-icon {
                 color: #7f7f7f;
+
                 &:hover {
                     color: #506dab;
                 }
@@ -117,6 +153,7 @@
 
             & .linkedin-icon {
                 color: #7f7f7f;
+
                 &:hover {
                     color: #007bb6;
                 }
@@ -165,12 +202,12 @@
 
         height: 100%; 
 
-        padding: 15px 25px;
+        padding: 15px 20px;
     }
 }
 
 .social-icon {
-    padding: 0 2px 0 2px;
+    padding: 0 3px 0 3px;
 
     &-wrapper {
         display: flex; 
@@ -184,12 +221,16 @@
 
 .image-section {
     background-image: url("https://stunited.vn/wp-content/uploads/2016/02/houzez-header-4.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-position-x: 50%;
+    
+
+    &-inner {
+        padding: 35px 15px 0 15px;
+    }
 
     &__content {
-        padding: 40px 0 55px;
+        padding: 0px 0 55px;
 
         cursor: pointer;
     }
@@ -203,8 +244,7 @@
             box-shadow: 0 0 3px rgba(0,0,0,.15);
 
             &__content {
-                margin-left: 30px;
-                padding-right: 30px;
+                margin: 0 10px;
 
                 .block__icon {
                     cursor: pointer;
@@ -229,13 +269,13 @@
         &-name {
             font-weight: 500;
             font-size: 20px;
+
+            color: #000;
         }
 
         &-description {
             font-weight: 300;
             font-size: 16px;
-
-            margin-bottom: 10px;
 
             color: #636363;
         }
@@ -252,9 +292,9 @@
 }
 
 .slider {
-
     &-button-wrapper {
-        float: right;
+        display: flex; 
+        justify-content: flex-end
     }
 
     &-control__button {
@@ -285,17 +325,51 @@
 }
 
 .partner {
-    &-item {
-        background-color: #fff;
-        box-shadow: 0 0 3px rgba(0,0,0,.15);
-        list-style-type: none;
+    &-logo {
+        text-align: center;
 
-        &-content {
-            width: 293px;
-            display: flex;
-            justify-content: center;
-            text-align: center;
+        img {
+            width: auto !important; 
+            display: inline-block !important;
         }
     }
 }
-   
+
+@media only screen and (max-width: 792px) {
+    .partner-logo {
+        img {
+            width: 120px !important;
+            height: 120px !important;
+        }
+    } 
+}
+
+.owl {
+    &-stage {
+        transform: translate3d(-2047px, 0px, 0px);
+        transition: 1.4s;
+    }
+
+    &-dots {
+        margin-top: 10px;
+    }
+
+    &-dot {
+        display: inline;
+
+        & span {
+            margin: 0px !important;
+        }
+    }
+
+    &-item-partner {
+        box-shadow: 0 0 3px rgba(0,0,0,.15);
+        background-color: #fff;
+        list-style-type: none;
+        padding: 35px 15px;
+        text-align: center;
+    }
+}
+
+
+
