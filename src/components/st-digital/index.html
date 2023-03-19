@@ -43,10 +43,9 @@
   <body>
     <div class="header-wrapper">
       <div class="header-content">
-        <div class="banner-parallax" style="height: 400px;">
+        <div class="banner-parallax" style="height: 400px">
           <div class="banner-wrapper">
-            <div class="banner-background-image">
-            </div>
+            <div class="banner-background-image"></div>
           </div>
         </div>
         <div class="banner-caption">
@@ -55,97 +54,166 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container custom-container">
       <div class="row">
-        <div class="col-sm-12" style="border: 1px solid red;">ST Digital</div>
-        <div class="col-sm-12" style="border: 1px solid red;">
-          <p><span>ST Digital</span><span></span></p>
+        <div class="col-sm-12">
+          <div class="page-title-wrapper">
+            <h1 class="page-title">ST Digital</h1>
+          </div>
         </div>
       </div>
+      <section
+        class="col-sm-12 no-left-padding st-digital-description"
+      >
+        <p>
+          <strong>ST Digital</strong> <span id="st-digital-description"></span>
+        </p>
+      </section>
+      <div class="row digital-items-wrapper" id="digital-items"></div>
       <div class="row">
-        <div class="col-md-4 col-sm-12" style="border: 1px solid blue;">Block1</div>
-        <div class="col-md-4 col-sm-12" style="border: 1px solid blue;">Block2</div>
-        <div class="col-md-4 col-sm-12" style="border: 1px solid blue;">Block3</div>
+        <div class="team-introduction">
+          <h3>Meet our team</h3>
+        </div>
       </div>
+      <div class="row" id="team-members"></div>
     </div>
   </body>
 
   <script>
     const st_digital_description = 
-    `offers professional offshore digital marketing services that can make your business stand out 
+    ` offers professional offshore digital marketing services that can make your business stand out 
     from the digital crowd. Our digital marketing services range from search engine optimisation (SEO), 
     social media services, email marketing services, content outsourcing, and graphic design services, 
     which aids in creating organic engagement and direct traffic towards your website and its content. 
     Through partnering with ST, we can help you create a good lasting impression online and give you 
     an edge over your top competitors!`;
 
-    const st_digital_items = [
+    const digital_items = [
       {
-        name: 'SEO',
-        image: 'https://stunited.vn/wp-content/uploads/2019/09/seo.png',
+        name: "SEO",
+        image: "https://stunited.vn/wp-content/uploads/2019/09/seo.png",
         description: `With ST Digital, your outsourced staff in the Vietnam will render Search Engine 
         Optimisation services guaranteed to boost your visibility and accessibility online by helping 
         you climb up to the top of Search Engine Results Pages (SERPs). Changing times call for changing 
-        your business strategies, and our goal is to help you grow as well as keep up with the times.`
+        your business strategies, and our goal is to help you grow as well as keep up with the times.`,
       },
       {
-        name: 'Social Media Service',
-        image: 'https://stunited.vn/wp-content/uploads/2019/09/marketing-300x300.png',
+        name: "Social Media Service",
+        image:
+          "https://stunited.vn/wp-content/uploads/2019/09/marketing-300x300.png",
         description: `Our social media services is a commonly used method for directing traffic onto 
         your website or specific content through increased visibility in different social media sites 
         and engaging with your audience in the same platform. It is commonly synthesised to support SEO 
-        efforts and helps your brand to become easily accessible to your audience.`
+        efforts and helps your brand to become easily accessible to your audience.`,
       },
       {
-        name: 'Graphic Design',
-        image: 'https://stunited.vn/wp-content/uploads/2019/09/webdesign-icon-300x300.png',
+        name: "Graphic Design",
+        image:
+          "https://stunited.vn/wp-content/uploads/2019/09/webdesign-icon-300x300.png",
         description: `Sensible and engaging, our design studio is here to help you effectively communicate 
         your brand online. We help you create a meaningful and lasting impression with your customers, 
-        leading to new opportunities for your business.`
-      }
+        leading to new opportunities for your business.`,
+      },
     ];
 
     const team_members = [
       {
-        name: 'Hoa, Le My',
-        role: 'Digital Marketer',
-        avatar: 'http://dev.stunited.vn/wp-content/uploads/2019/09/20431332_1805663032784139_2478410876069611325_n-300x300.jpg'
+        name: "Hoa, Le My",
+        role: "Digital Marketer",
+        avatar:
+          "http://dev.stunited.vn/wp-content/uploads/2019/09/20431332_1805663032784139_2478410876069611325_n-300x300.jpg",
       },
       {
-        name: 'Thinh, Nguyen Duc',
-        role: 'Amazon Business Executive',
-        avatar: 'https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-10.14.48-AM-e1567739750539.png'
+        name: "Quoc Phan",
+        role: "Creative Designer",
+        avatar:
+          "https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-9.57.56-AM-e1567738897606.png",
       },
       {
-        name: 'Quoc Phan',
-        role: 'Creative Designer',
-        avatar: 'https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-9.57.56-AM-e1567738897606.png'
+        name: "Thuong, Pham Quynh",
+        role: "Digital Marketer",
+        avatar:
+          "https://stunited.vn/wp-content/uploads/2019/09/39309617_2207185245989746_4586629101913112576_n-768x768.jpg",
       },
       {
-        name: 'Toan Pham',
-        role: 'Tool Developer',
-        avatar: 'https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-10.33.52-AM-e1567740899939.png'
+        name: "Anh, Vo Quynh",
+        role: "Digital Marketer",
+        avatar:
+          "https://stunited.vn/wp-content/uploads/2019/09/20190306_193427_746-1-e1567739330543-768x765.jpg",
       },
       {
-        name: 'Thuong, Pham Quynh',
-        role: 'Digital Marketer',
-        avatar: 'https://stunited.vn/wp-content/uploads/2019/09/39309617_2207185245989746_4586629101913112576_n-768x768.jpg'
+        name: "Thinh, Nguyen Duc",
+        role: "Amazon Business Executive",
+        avatar:
+          "https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-10.14.48-AM-e1567739750539.png",
       },
       {
-        name: 'Ngan, Tran Mai',
-        role: 'Amazon Business Executive',
-        avatar: 'https://stunited.vn/wp-content/uploads/2019/09/46826207_2335699766654103_6405298755335094272_o-e1567741149586-768x768.jpg'
+        name: "Toan Pham",
+        role: "Tool Developer",
+        avatar:
+          "https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-10.33.52-AM-e1567740899939.png",
       },
       {
-        name: 'Anh, Vo Quynh',
-        role: 'Digital Marketer',
-        avatar: 'https://stunited.vn/wp-content/uploads/2019/09/20190306_193427_746-1-e1567739330543-768x765.jpg'
+        name: "Ngan, Tran Mai",
+        role: "Amazon Business Executive",
+        avatar:
+          "https://stunited.vn/wp-content/uploads/2019/09/46826207_2335699766654103_6405298755335094272_o-e1567741149586-768x768.jpg",
       },
       {
-        name: 'Loi Mai',
-        role: 'Amazon Business Executive',
-        avatar: 'https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-10.48.02-AM-e1567741771971.png'
+        name: "Loi Mai",
+        role: "Amazon Business Executive",
+        avatar:
+          "https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-10.48.02-AM-e1567741771971.png",
       }
     ];
+
+    document.getElementById("st-digital-description").innerHTML =
+      st_digital_description;
+
+    renderDigitalItems(digital_items);
+    renderTeamMembers(team_members);
+
+    function renderDigitalItems(digital_items) {
+      let items_list = "";
+      $.each(digital_items, function (index) {
+        items_list += '<div class="col-md-4 col-sm-12 digital-item-wrapper">';
+        items_list += '<div class="digital-item">';
+        items_list += '<div class="digital-item-icon">';
+        items_list +=
+          '<img width="60px" height="60px" alt="digital-icon" src="' +
+          digital_items[index].image +
+          '" />';
+        items_list += "</div>";
+        items_list += '<div class="digital-item-content">';
+        items_list +=
+          '<h3 class="digital-item-content-title">' +
+          digital_items[index].name +
+          "</h3>";
+        items_list +=
+          '<p class="digital-item-content-description">' +
+          digital_items[index].description +
+          "</p>";
+        items_list += "</div>";
+        items_list += "</div>";
+        items_list += "</div>";
+      });
+      $("#digital-items").append(items_list);
+    };
+
+    function renderTeamMembers(team_members) {
+      let members_list = "";
+      $.each(team_members, function (index) {
+        members_list += '<div class="col-sm-12 col-md-3">';
+        members_list += '<div class="team-member-wrapper">';
+        members_list += '<div class="team-member-avatar" style="background-image: url(' + team_members[index].avatar + ');"></div>';
+        members_list += '<div>' + '<p>';
+        members_list += '<strong>' + team_members[index].name + '</strong>' + '<br />';
+        members_list += team_members[index].role;
+        members_list += '</p>' + '</div>';
+        members_list += "</div>";
+        members_list += "</div>";
+      });
+      $("#team-members").append(members_list);
+    };
   </script>
 </html>
