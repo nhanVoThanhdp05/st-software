@@ -23,31 +23,46 @@ body {
     margin: 0;
     background-color: #f5f5f5
 }
-
-
-.banner{
-    margin-top: -10%;
+.text-container{
+    margin-left: 26px;
+    margin-top: -50px;
+}
+.card-title{
+    font-size: 20px;
+    line-height: 28px;
+    width: 273px;
+    margin-top: 60px;
+    margin-bottom: 0px;
 }
 .card-text{
+    width: 273px;
+    font-size: 16px;
+    line-height: 22px;
     font-weight: 300;
+    margin: -5px 0 10px 0;
+    font-family: Roboto;
 }
-
+.text-container >a{
+    color: #00AEEF;
+}
 .stories__title {
     padding-top: 55px;
-    margin: 0 0 10px 0;
+    margin: 59px 0 0px 0;
     text-align: center;
     font-size: 24px;
     font-weight: 500;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--dark-color)
+    color: var(--dark-color);
+  
 }
 
 .stories__desc {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 24px;
-    font-weight: 330;
+    font-weight: 300;
+    text-transform: inherit;
     color: var(--dark-color);
-    margin: 0 0 20px 0;
+    margin: 10px 0 20px 0;
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
@@ -120,7 +135,7 @@ body {
     line-height: 18px;
     font-weight: 450;
     margin: 0 0 12px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Roboto;
     word-spacing: 5px;
     color: var(--white-color)
 }
@@ -169,6 +184,8 @@ body {
     font-family: Roboto-Light
 }
 
+
+
 .stories__content .item__desc-second .technical a {
     color: var(--dark-color);
     font-family:  Roboto
@@ -194,12 +211,34 @@ body {
 
 .stories__content .item__desc-second .team-social li a {
     color: #7f7f7f;
-    transition: all .6s
+    transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -ms-transition: all .6s;
+    -o-transition: all .6s;
 }
 .stories__content.item__desc-second li{
     display: flex;
 }
 
+.stories__content .item__desc-second h4 a:hover{
+    transition: all .1s;
+    color: #00AEEF  ;
+    text-decoration: none;
+    -webkit-transition: all .1s;
+    -moz-transition: all .1s;
+    -ms-transition: all .1s;
+    -o-transition: all .1s;
+}
+.stories__content .item__desc-second p a:hover{
+    transition: all .1s;
+    color: #00AEEF  ;
+    text-decoration: none;
+    -webkit-transition: all .1s;
+    -moz-transition: all .1s;
+    -ms-transition: all .1s;
+    -o-transition: all .1s;
+}
 .stories__content .item__desc-second .team-social li a.btn-linkedin:hover {
     transition: all .6s;
     color: #007bb6
@@ -213,8 +252,16 @@ body {
     transition: all .6s;
     color: #506dab
 }
+.stories__content .item__desc-second .team-social li a.btn-google:hover {
+    transition: all .6s;
+    color: #506dab
+}
 
-
+@media (min-width: 1200px){
+.container {
+    max-width: 1150px;
+    width: 1150px !important;
+}
 @media (max-width:768px) {
 
 
@@ -254,4 +301,5 @@ body {
     .stories__content-item{
         width: 100%;
     }
+}
 }
