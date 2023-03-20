@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevPlus</title>
-
+    <title>ST Digital - ST United</title>
+    <link rel="icon" type="image/gif" href="https://stunited.vn/wp-content/uploads/2019/09/stunited-e15650013362301.png">
     <!-- Booststrap 4 -->
     <link
       rel="stylesheet"
@@ -28,12 +28,6 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
-    />
-
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="../../../assets/packages/font-awesome-4.7.0/css/font-awesome.min.css"
     />
 
     <!-- CSS -->
@@ -63,7 +57,7 @@
         </div>
       </div>
       <section
-        class="col-sm-12 no-left-padding st-digital-description"
+        class="col-sm-12 no-padding st-digital-description"
       >
         <p>
           <strong>ST Digital</strong> <span id="st-digital-description"></span>
@@ -130,6 +124,7 @@
           "https://stunited.vn/wp-content/uploads/2019/09/Screen-Shot-2019-09-06-at-9.57.56-AM-e1567738897606.png",
       },
       {
+
         name: "Thuong, Pham Quynh",
         role: "Digital Marketer",
         avatar:
@@ -204,8 +199,10 @@
       let members_list = "";
       $.each(team_members, function (index) {
         members_list += '<div class="col-sm-12 col-md-3">';
-        members_list += '<div class="team-member-wrapper">';
-        members_list += '<div class="team-member-avatar" style="background-image: url(' + team_members[index].avatar + ');"></div>';
+        members_list += '<div class="team-member-wrapper">';   
+        members_list += '<div class="team-member-avatar" style="background-image: url(' 
+          + team_members[index].avatar 
+          + ');"></div>';        
         members_list += '<div>' + '<p>';
         members_list += '<strong>' + team_members[index].name + '</strong>' + '<br />';
         members_list += team_members[index].role;

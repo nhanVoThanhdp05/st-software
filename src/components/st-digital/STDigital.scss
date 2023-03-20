@@ -9,8 +9,9 @@ body {
     background-color: #f5f5f5;
 }
 
-.no-left-padding {
+.no-padding {
     padding-left: 0 !important;
+    padding-right: 0 !important;
 
     strong {
         font-weight: 700;
@@ -59,8 +60,10 @@ body {
 
 .banner {
     &-parallax {
-        height: 400px !important;
+        height: 400px;
+        
         overflow: hidden;
+
         position: relative;
     }
 
@@ -68,7 +71,10 @@ body {
         z-index: 0;
 
         visibility: inherit;
+        
         opacity: 1;
+
+        backface-visibility: hidden;
 
         top: 0;
         right: 0;
@@ -84,37 +90,29 @@ body {
         background-image: url('https://stunited.vn/wp-content/uploads/2019/09/sparkgrowth-124408265.jpg');
 
         background-repeat: no-repeat;
-        background-position: center;
+        background-position-x: center;
+        background-position-y: center;
         background-size: cover;
 
         height: 100%;
         width: 100%;
 
         visibility: inherit;
-
-        &::before {
-            background-color: #000000;
-            opacity: 0.4;
-            z-index: 3;
-            content: '';
-
-            top: 0;
-            right: 0;
-            left: 0;
-
-            position: absolute;
-
-            height: 100%;
-            width: 100%;
-        }
     }
 
     &-caption {
+        color: #fff;
+
         left: 50%;
         text-align: center;
-        transform: translate(-50%, -50%);
+
+        top: 50%;
+
+        transform: translate(-50%, -50%); //
+
         z-index: 5;
-        position: absolute;
+
+        position: absolute !important;
         width: 100%;
 
         @media only screen and (mix-width: 991px) {
@@ -130,12 +128,27 @@ body {
             margin: 0 0 10px;
         }
 
+        @media only screen and (max-width: 767px) {
+            h1 {
+                font-size: 24px;
+                line-height: 28px;
+                margin: 0 0 5px;
+            }
+        }
+
         h2 {
-            color: #000000;
+            color: #ffffff;;
             font-size: 20px;
             margin: 0 0 20px;
         }
 
+        @media (max-width: 767px) {
+            h2 {
+                font-size: 16px;
+                line-height: 22px;
+                margin-bottom: 15px;
+            }
+        }
     }
 }
 
@@ -152,7 +165,7 @@ body {
         }
 
         &-wrapper {
-            padding: 30px 0;
+            padding: 15px 0;
             width: 100% !important;
         }
     }
