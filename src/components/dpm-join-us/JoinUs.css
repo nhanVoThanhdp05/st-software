@@ -1,100 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-*{
-    font-family: 'Roboto', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
 }
-.img{
-    margin-left: -20px;
-    position: absolute;
-    margin-top: 0%;
-    width:101%;
-    height:450px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  .background{
-    background-color: rgba(0, 0, 0, 0.5);
-    width:1515.5px;
-    height:450px;
-    z-index: 2;
-    position: relative;
-    margin-top: 0%;
-  }
-  .textBackground{
-    position: absolute;
-    top:-15rem;
-    z-index: 6;
-    color:white;
-    font-weight: 900;
-    font-size: 43px;
-    line-height: 43px;
-    font-weight: 500;
-    text-align: center;
-    
-  }
-  .textBackground h1{
-    color: white;
-    font-weight: 1000;
-    font-size: 43px;
-  }
-  .textBackground h2{
-    color: white;
-    font-weight: 1000;
-    font-size: 43px;
-  }
-.textContent{
-    text-align: center;
-    margin: 50px 0px 50px 0px;
-    font-weight: 350;
-    font-size: 17px;
 
+.container {
+  margin: 0 auto;
+  padding: 0px !important;
 }
-.col-sm-6{
-   
-    background-color: white;
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 0%), 0 2px 10px 0 rgb(0 0 0 / 10%);
-    min-height: 500px;
-    margin-bottom: 150px;
-    
+
+.row{
+  
 }
-.col-sm-6 h5 p{
-    background-color: red;
+
+.overview {
+  background-color: #f8f9fa;
 }
-.card-body{
-    margin-top: -30px;
-    text-align: center;
-    font-size: 15px;
-    color: grey;
+
+.textContent {
+  text-align: center;
+  padding-top: 65px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  margin-bottom: 60px;
 }
-.card-body > .card-title{
-    color: #000;
-    font-weight: 600;
-    font-family: 'Roboto', sans-serif;
+
+.card-img-top {
+  font-weight: 300;
+  list-style: 24px;
+  padding: 50px 35px 50px 35px !important;
+  text-align: center;
+  width: 350px;
 }
-.card-text{
- color: #636363;
- font-size: 16px;
- font-weight: 350;
- font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+.img {
+  display: inline;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
 }
-.card-text a{
+
+.card-img-top {
+  padding: 55px;
+  font-size: 60px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.card-body {
+    margin-top: -20px;
+  font-size: 15px;
+  color: grey;
+}
+
+.card-body > .card-title {
+  color: #000;
+  /* font-weight: 1000; */
+  text-align: center;
+  font-family: Roboto;
+  font-size: 20px;
+}
+
+.card-body > .card-title > h3{
+    font-weight: 500;
+    font-family: Roboto;
+}
+
+.col-sm-6 {
+  background-color: white;
+  box-shadow: 0 0 3px rgba(0,0,0,.15);
+  min-height: 500px;
+  text-align: center;
+  margin-bottom: 170px;
+}
+
+.card-body > h5 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.card-text {
+    color: #636363;
     font-size: 16px;
-    font-weight: 600;
+    text-align: center;
+    font-family: "Roboto";
+    font-weight: 300;
+
+  
 }
-.col-sm-6:hover{
-    -webkit-transition: background-color 10000ms linear;
-    -ms-transition: background-color 10000ms linear;
-    transition: background-color 10000ms linear;
-z-index: 1;
-    transform: scale(1.1);
-    transition: 0.3s;
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 20px 0 rgb(0 0 0 / 20%);
+
+
+.card-body > a {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    margin: 0;
+    font-family: Roboto;
+    color: #00AEEF;
 }
-.card-img-top{
-    padding: 50px;
-   
+
+.col-sm-6:hover {
+  -webkit-transition: background-color 10000ms linear;
+  -ms-ransition: background-color 10000ms linear;
+  transition: background-color 10000ms linear;
+  z-index: 1;
+  transform: scale(1.1);
+  transition: 0.3s;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 20px 0 rgb(0 0 0 / 20%);
 }
-.card-text > a{
-    position: relative;
-    top:120px;
-}
+
