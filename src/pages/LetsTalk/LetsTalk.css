@@ -1,24 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   
   }
+
   body {
     font-family: Roboto;
-      font-weight: 500;
+      font-weight: 300;
       text-transform: inherit;
       text-align: inherit;
-    
-  
   }
+
+  b, strong{
+    font-weight: 700;
+  }
+
+  .main-container {
+    background-color: white; 
+    padding: 25px; 
+    width: 1169px; 
+    margin-left: -16px; 
+    margin-top: -7px;
+  }
+
   .header {
     height: 399px;
     width: 100%;
     opacity: 1;
     filter:brightness(70%);
-    
-  
+  }
+
+  .breadcrumb {
+    background-color: whitesmoke; 
+    height: 20px; 
+    margin-left: -15px; 
+    padding-top: 21px;
   }
   
   .lets h1 {
@@ -48,7 +66,20 @@
   .widget-pages {
     color: beige;
   }
-  
+  @media (min-width: 1200px) {
+.container {
+    max-width: 1170px;
+}
+  }
+
+
+  .main-section {
+    padding-top: 17px; 
+    padding-left: 30px;
+  }
+
+
+
   
   
   
