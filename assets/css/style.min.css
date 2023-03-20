@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @font-face {
   font-family: Roboto;
   src: url(font/Roboto-Black.ttf);
@@ -89,7 +89,7 @@ a {
   color: var(--white-color);
   font-family: FontAwesome;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 22px;
   background-color: rgba(1, 1, 1, 0.6);
   border-radius: 50%;
   transition: all 0.6s;
@@ -261,10 +261,8 @@ a {
   display: inline-flex;
 }
 .header__menu-logo a img {
-  max-height: 24px;
-  width:33.96px;
+  max-height: 58px;
 }
-
 .slider__item-img {
   height: 100vh;
   background-repeat: no-repeat;
@@ -481,8 +479,7 @@ a {
   transition-delay: 300 !important;
 }
 #footer .footertop {
-  margin-bottom: -30px;
-  padding: 100px 0px 70px 0px;
+  padding: 100px 0 70px;
   background-color: #181818;
 }
 #footer .footertop .container {
@@ -493,7 +490,7 @@ a {
   font-weight: 500;
   font-size: 18px;
   margin: 0 0 17px 0;
-  color: #fff;
+  color: var(--white-color);
   text-transform: uppercase;
 }
 #footer .footertop .container {
@@ -502,7 +499,7 @@ a {
 }
 #footer .footertop .container .footertop__item {
   width: calc((100% - 90px) / 3);
-  /* padding: 0 15px; */
+  padding: 0 15px;
 }
 #footer .footertop .container .footertop__item-content > ul {
   padding-left: 0;
@@ -540,7 +537,7 @@ a {
   padding-left: 20px;
 }
 #footer .footertop .container .footertop__item-content > ul > li a {
-  color: #fff;
+  color: var(--white-color);
   text-transform: uppercase;
   font-family: Roboto-Light;
   transition: all 0.4s;
@@ -559,7 +556,7 @@ a {
 }
 #footer .footertop .container .footertop__item address p {
   margin: 0;
-  color: #fff;
+  color: var(--white-color);
   font-family: Roboto-Light;
   font-size: 14px;
   line-height: 24px;
@@ -576,7 +573,7 @@ a {
   margin-bottom: 6px;
 }
 #footer .footertop .container .footertop__item address ul li a {
-  color: #fff;
+  color: var(--white-color);
   font-style: normal;
   transition: all 0.4s;
   font-family: Roboto-Light;
@@ -594,7 +591,6 @@ a {
   font-style: normal;
 }
 #footer .footerbot {
-  min-height: 79px;
   border-top: 1px solid #00243f;
   background-color: #000;
 }
@@ -655,8 +651,7 @@ a {
     max-width: 1170px;
   }
   #footer .footertop .container {
-    max-width: 1170px;
-    max-height: 191px;
+    max-width: 1000px;
   }
   .slider__item-desc {
     bottom: 60px;
